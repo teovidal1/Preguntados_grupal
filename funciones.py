@@ -130,7 +130,6 @@ def buscar_pregunta_azar(preguntas: dict):
     return pregunta_elegida, categoria_elegida
 
 
-
 def buscar_pregunta_azar_en_categoria(preguntas:dict, categoria_elegida:str):
     pregunta_elegida = random.choice(preguntas[categoria_elegida])
     return pregunta_elegida

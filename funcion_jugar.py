@@ -47,11 +47,12 @@ def jugar(lista_usuarios:list):
                 lista_usuarios[indice_jugador]["racha"] =0
                 coronas_faltantes.remove(categoria_elegida)
                 coronas_faltantes_string = ", ".join(coronas_faltantes)
-                (lista_usuarios[indice_jugador]["coronas"]).add(categoria_elegida)
+                (lista_usuarios[indice_jugador]["coronas"]).append(categoria_elegida)
                 print ("")
                 print ("¡¡¡CORRECTO!!!")
                 print (f"¡¡¡GANASTE LA CORONA DE {categoria_elegida}!!!")
-                print (f"AHORA TE FALTAN LAS CORONAS DE: {(coronas_faltantes_string)}")
+                if len(coronas_faltantes_string)!=0:
+                    print (f"AHORA TE FALTAN LAS CORONAS DE: {(coronas_faltantes_string)}")
                 print ("")
 
             else: 
@@ -65,11 +66,13 @@ def jugar(lista_usuarios:list):
 
     if len(set(lista_usuarios[indice_jugador]["coronas"]))==4:
         lista_usuarios[indice_jugador]["victorias"] += 1 
-        print (f"¡¡VICTORIA!!, AHORA TENES {lista_usuarios[indice_jugador]["victorias"]} victorias")
+        print (f"¡¡VICTORIA!!, AHORA TENES {lista_usuarios[indice_jugador]["victorias"]} victoria/s")
         lista_usuarios[indice_jugador]["vidas"] = 3
 
     if lista_usuarios[indice_jugador]["vidas"]==0:
         print (f"Perdiste!")
         lista_usuarios[indice_jugador]["vidas"] = 3
+    lista_usuarios[indice_jugador]["partidas_jugadas"] += 1 
+    guardar_usuarios(lista_usuarios)
 
     lista_usuarios[indice_jugador]["partidas_jugadas"] +=1
