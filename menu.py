@@ -4,6 +4,7 @@ opcion_elegida=""
 
 while opcion_elegida!="5" :
     opcion_elegida=menu_juego()
+    
     match opcion_elegida:
         case "1":
             jugar(lista_usuarios)
