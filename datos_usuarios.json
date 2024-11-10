@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "nombre": "Usuario_ejemplo",
+        "vidas": 3,
+        "coronas": [],
+        "victorias": 0,
+        "racha": 0,
+        "partidas_jugadas": 0
+    }
+]
