@@ -65,10 +65,10 @@ def borrar_jugadores(lista_jugadores:list):
     cantidad_jugadores = len(lista_jugadores)
     for i in range(cantidad_jugadores):
         print (f"{(lista_jugadores[i]["nombre"]).capitalize()}, {lista_jugadores[i]["victorias"]} victorias en {lista_jugadores[i]["partidas_jugadas"]} partidas jugadas")
-    jugador_a_eliminar = input("Ingrese qué jugador desea eliminar")
+    jugador_a_eliminar = input("Ingrese qué jugador desea eliminar: ")
     for i in range (len(lista_jugadores)):
         if lista_jugadores[i]["nombre"]==jugador_a_eliminar:
-            lista_jugadores.pop(lista_jugadores[i])
+            lista_jugadores.pop(i)
 
 
 
