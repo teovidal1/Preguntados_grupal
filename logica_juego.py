@@ -9,6 +9,7 @@ def jugar(lista_usuarios:list):
     preguntas=leer_csv()
 
     nombre_usuario = input ("Ingrese su nombre de usuario: ").capitalize()
+    
     if validar_nombre(nombre_usuario, lista_usuarios)==False:
         lista_usuarios.append(crear_usuario(nombre_usuario))
 
@@ -80,7 +81,7 @@ def jugar(lista_usuarios:list):
         
     lista_usuarios[indice_jugador]["vidas"] = 3
     lista_usuarios[indice_jugador]["partidas_jugadas"] +=1
-    lista_usuarios[indice_jugador]["coronas"]=[]
+    lista_usuarios[indice_jugador]["coronas"]=set()
 
     guardar_usuarios(lista_usuarios)
 

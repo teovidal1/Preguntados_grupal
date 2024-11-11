@@ -51,7 +51,7 @@ def buscar_indice_usuario_en_lista(lista_usuarios:list[dict], nombre_usuario:str
     for i in range (len(lista_usuarios)):
         if lista_usuarios[i]["nombre"]==nombre_usuario:
             indice_usuario_actual= i
-        return indice_usuario_actual
+            return indice_usuario_actual
     return None
 
 
