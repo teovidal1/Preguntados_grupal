@@ -81,6 +81,6 @@ def jugar(lista_usuarios:list):
     lista_usuarios[indice_jugador]["vidas"] = 3
     lista_usuarios[indice_jugador]["partidas_jugadas"] +=1
     lista_usuarios[indice_jugador]["coronas"]=[]
-    
+
     guardar_usuarios(lista_usuarios)
 
