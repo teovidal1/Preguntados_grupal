@@ -74,13 +74,13 @@ def jugar(lista_usuarios:list):
         lista_usuarios[indice_jugador]["victorias"] += 1 
         print (f"¡¡VICTORIA!!, AHORA TENES {lista_usuarios[indice_jugador]["victorias"]} victoria/s")
         
+
     if lista_usuarios[indice_jugador]["vidas"]==0:
         print (f"Perdiste!")
         
-
     lista_usuarios[indice_jugador]["vidas"] = 3
     lista_usuarios[indice_jugador]["partidas_jugadas"] +=1
-    lista_usuarios[indice_jugador]["coronas"]=()
-
+    lista_usuarios[indice_jugador]["coronas"]=[]
+    
     guardar_usuarios(lista_usuarios)
 
